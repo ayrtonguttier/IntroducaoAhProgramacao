@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <meta charset="utf-8" />
-
 <html>
 
 <head>
@@ -9,17 +8,41 @@
 
 <body>
     <p>
-        Valor 1 <input type="text">
+        Valor 1 <input id="primeiroValor" type="text">
     </p>
     <p>
-        Valor 2 <input type="text">
+        Valor 2 <input id="segundoValor" type="text">
+    </p>  
+    <p>        
+        <button onclick="BotaoSomaOnClick()">Somar</button>          
+        <button onclick="BotaoSubtrairOnClick()">Subtrair</button>
+        <button onclick="BotaoMultiplicarOnClick()">Multiplicar</button>
     </p>
     <p>
-        <button>Somar</button>
+        Resultado: <span id="resultado"></span>
     </p>
-    <p>
-        Resultado: <span></span>
-    </p>
+    
+
+    <script type="text/javascript">
+        function BotaoSomaOnClick() {
+            var valor1 = document.getElementById("primeiroValor").value;
+            var valor2 = document.getElementById("segundoValor").value;
+            document.getElementById('resultado').innerHTML = parseInt(valor1) + parseInt(valor2);
+        }
+
+        function BotaoSubtrairOnClick() {
+            var valor1 = document.getElementById("primeiroValor").value;
+            var valor2 = document.getElementById("segundoValor").value;
+            document.getElementById('resultado').innerHTML = parseInt(valor1) - parseInt(valor2);
+        }
+
+        function BotaoMultiplicarOnClick() {
+            var valor1 = document.getElementById("primeiroValor").value;
+            var valor2 = document.getElementById("segundoValor").value;
+            document.getElementById('resultado').innerHTML = parseInt(valor1) * parseInt(valor2);
+        }
+    </script>
+
 </body>
 
 </html>
