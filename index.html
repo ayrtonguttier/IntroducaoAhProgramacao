@@ -17,6 +17,7 @@
         <button onclick="BotaoSomaOnClick()">Somar</button>          
         <button onclick="BotaoSubtrairOnClick()">Subtrair</button>
         <button onclick="BotaoMultiplicarOnClick()">Multiplicar</button>
+        <button onclick="BotaoDividirOnClick()">Dividir</button>
     </p>
     <p>
         Resultado: <span id="resultado"></span>
@@ -25,22 +26,25 @@
         function BotaoSomaOnClick() {
             var valor1 = document.getElementById("primeiroValor").value;
             var valor2 = document.getElementById("segundoValor").value;
-            document.getElementById('resultado').innerHTML = parseInt(valor1) + parseInt(valor2);
+            document.getElementById('resultado').innerHTML = parseFloat(valor1) + parseFloat(valor2);
         }
 
         function BotaoSubtrairOnClick() {
             var valor1 = document.getElementById("primeiroValor").value;
             var valor2 = document.getElementById("segundoValor").value;
-            document.getElementById('resultado').innerHTML = parseInt(valor1) - parseInt(valor2);
+            document.getElementById('resultado').innerHTML = parseFloat(valor1) - parseFloat(valor2);
         }
 
         function BotaoMultiplicarOnClick() {
             var valor1 = document.getElementById("primeiroValor").value;
             var valor2 = document.getElementById("segundoValor").value;
-            document.getElementById('resultado').innerHTML = parseInt(valor1) * parseInt(valor2);
+            document.getElementById('resultado').innerHTML = parseFloat(valor1) * parseFloat(valor2);
         }
-
-        //Fazer operação de divisão. Sinal de divisão é / .
+        function BotaoDividirOnClick() {
+            var valor1 = document.getElementById("primeiroValor").value;
+            var valor2 = document.getElementById("segundoValor").value;
+            document.getElementById('resultado').innerHTML = parseFloat(valor1) / parseFloat(valor2);
+        }
     </script>
 
 </body>
