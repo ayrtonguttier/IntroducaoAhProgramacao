@@ -1,0 +1,66 @@
+<html>
+
+<body>
+
+
+    <p>
+        Valor 1 <input id="primeiroValor" type="text">
+    </p>
+    <p>
+        Valor 2 <input id="segundoValor" type="text">
+    </p>
+    <p>
+        Operações: <br>
+        <button onclick="DefineOperacao('+')">SOMA</button>
+        <button onclick="DefineOperacao('-')">SUBTRAÇÃO</button>
+        <button onclick="DefineOperacao('*')">MULTIPLICAÇÃO</button>
+        <button>/</button>
+    </p>
+    <p>
+        <button onclick="Calcular()">Igual</button>
+    </p>
+    <p>
+        Operação Atual: <span id="operacaoAtual"></span>
+    </p>
+    <p>
+        Resultado: <span id="spanResultado"></span>
+    </p>
+
+
+
+    <script>
+        var operacaoAtual = '';
+
+        function DefineOperacao(operacao) {
+            document.getElementById('operacaoAtual').innerHTML = operacao;
+            operacaoAtual = operacao;
+        }
+
+        function Calcular() {
+            var valor1 = parseInt(document.getElementById('primeiroValor').value);
+            var valor2 = parseInt(document.getElementById('segundoValor').value);
+
+            if (operacaoAtual == '+') {
+                document.getElementById('spanResultado').innerHTML = valor1 + valor2;
+            }
+            if(operacaoAtual == '-'){
+                document.getElementById('spanResultado').innerHTML = valor1 - valor2;
+            }
+            if(operacaoAtual == '*'){
+                document.getElementById('spanResultado').innerHTML = valor1 * valor2;
+            }
+        }
+
+        // Condições
+        //IGual '='
+        //diferente '!='
+        //maior '>'
+        //menor '<'      
+
+
+        //Loops
+
+    </script>
+</body>
+
+</html>
